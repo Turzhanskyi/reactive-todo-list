@@ -16,9 +16,9 @@
     <% @todo_list.todo_items.each do |todo_item| %>
       <li class='list-group-item'>
         <div class='d-flex justify-content-between'>
-        <span>
-          <%= todo_item.description %>
-        </span>
+          <span>
+            <%= todo_item.description %>
+          </span>
           <%= link_to '#', class: 'btn btn-info' do %>
             <i class='fas fa-check'></i>
           <% end %>
