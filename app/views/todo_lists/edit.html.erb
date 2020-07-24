@@ -1,6 +1,16 @@
-<h1>Editing Todo List</h1>
+<div class='card-header'>
+  <div class='row'>
+    <div class='col-1'>
+      <%= link_to todo_lists_path, class: 'btn btn-dark' do %>
+        <i class='fas fa-angle-left'></i>
+      <% end %>
+    </div>
+    <div class='col-11'>
+      <h5 class='text-dark'>
+        Editing Todo List
+      </h5>
+    </div>
+  </div>
+</div>
 
 <%= render 'form', todo_list: @todo_list %>
-
-<%= link_to 'Show', @todo_list %> |
-<%= link_to 'Back', todo_lists_path %>
