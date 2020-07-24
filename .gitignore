@@ -48,5 +48,4 @@ yarn-debug.log*
 /vendor/bundle
 .env
 /config/database.yml
-
 /coverage
