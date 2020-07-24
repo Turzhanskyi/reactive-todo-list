@@ -32,4 +32,10 @@ group :development do
   gem 'web-console', '4.0.3'
 end
 
+group :test do
+  gem 'rails-controller-testing', '1.0.5'
+  gem 'shoulda-matchers', '4.3.0'
+  gem 'simplecov', '0.18.5', require: false
+end
+
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
