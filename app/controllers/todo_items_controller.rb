@@ -25,7 +25,7 @@ class TodoItemsController < ApplicationController
     @todo_item = @todo_list.todo_items.build(todo_item_params)
 
     if @todo_item.save
-      redirect_to(@todo_item.todo_list)
+      redirect_to @todo_item.todo_list, notice: 'Todo item was successfully created.'
     else
       render action: 'new'
     end
@@ -34,7 +34,7 @@ class TodoItemsController < ApplicationController
   # PUT todo_lists/1/todo_items/1
   def update
     if @todo_item.update(todo_item_params)
-      redirect_to([@todo_item.todo_list, @todo_item], notice: 'Todo item was successfully updated.')
+      redirect_to @todo_item.todo_list, notice: 'Todo item was successfully updated.'
     else
       render action: 'edit'
     end
@@ -44,7 +44,7 @@ class TodoItemsController < ApplicationController
   def destroy
     @todo_item.destroy
 
-    redirect_to todo_list_todo_items_url(@todo_list)
+    redirect_to @todo_item.todo_list, notice: 'Todo item was successfully destroyed.'
   end
 
   private

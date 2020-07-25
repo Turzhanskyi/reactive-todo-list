@@ -18,6 +18,9 @@
             <p class='text-secondary m-0'><small><%= todo_list.percent_complete %>% Complete
               (<%= todo_list.completed_items %>/<%= todo_list.total_items %> Todo Items)</small></p>
           </div>
+          <%= link_to todo_list_path(todo_list), method: :delete, class: 'btn btn-danger', data: { confirm: "Are you sure?" } do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
         </li>
       <% end %>
     <% end %>
